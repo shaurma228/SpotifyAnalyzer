@@ -15,6 +15,7 @@ import com.example.spotifyanalyzer.viewmodel.SharedViewModel
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var dataManager: DataManager
     private val sharedViewModel: SharedViewModel by viewModels()
 
     companion object {
@@ -24,6 +25,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        dataManager = DataManager(this)
+        loadSavedData()
 
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainer, UserStatsFragment())
@@ -71,6 +75,8 @@ class MainActivity : AppCompatActivity() {
                     sharedViewModel.loadData(jsonText)
                     sharedViewModel.analyzeSpotifyHistory()
 
+                    dataManager.saveJsonData(jsonText)
+
                     Toast.makeText(this, "Данные загружены успешно!", Toast.LENGTH_SHORT).show()
                 } catch (e: Exception) {
                     Log.e("MainActivity", "Ошибка при загрузке JSON: ${e.message}")
@@ -80,8 +86,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun loadSavedData() {
+        val savedJson = dataManager.loadJsonData()
+        if (savedJson.isNotEmpty()) {
+            sharedViewModel.loadData(savedJson)
+            sharedViewModel.analyzeSpotifyHistory()
+            Toast.makeText(this, "Данные загружены из памяти", Toast.LENGTH_SHORT).show()
+        }
+    }
+
     private fun clearData() {
         sharedViewModel.clearData()
         Toast.makeText(this, "Данные очищены!", Toast.LENGTH_SHORT).show()
+        dataManager.clearJsonData()
     }
 }
