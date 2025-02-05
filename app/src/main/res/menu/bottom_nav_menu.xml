@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_stats"
+        android:title="Статистика"/>
+    <item
+        android:id="@+id/nav_tracks"
+        android:title="Треки"/>
+    <item
+        android:id="@+id/nav_artists"
+        android:title="Артисты"/>
+    <item
+        android:id="@+id/nav_albums"
+        android:title="Альбомы"/>
+</menu>
