@@ -17,7 +17,7 @@
 
     </FrameLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/loadDataButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,18 +33,19 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#FDFDFD"
+        android:background="#00FDFDFD"
         android:visibility="visible"
-        app:itemBackground="@android:drawable/dialog_holo_dark_frame"
-        app:itemIconTint="@drawable/bottom_nav_item_color"
-        app:itemTextColor="@drawable/bottom_nav_item_text_color"
+        app:itemBackground="@android:drawable/divider_horizontal_bright"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        app:menu="@menu/bottom_nav_menu"
+        tools:visibility="visible" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/clearDataButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

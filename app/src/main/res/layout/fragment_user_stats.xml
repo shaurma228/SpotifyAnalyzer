@@ -11,22 +11,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Общее время прослушивания: 0 мин"
+        android:textColor="@color/material_dynamic_secondary"
         android:textSize="18sp"
-        android:textColor="#000000"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/totalListensTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Количество прослушиваний: 0"
+        android:textColor="@color/material_dynamic_secondary"
         android:textSize="18sp"
-        android:textColor="#000000"
-        app:layout_constraintTop_toBottomOf="@id/totalTimeTextView"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalTimeTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

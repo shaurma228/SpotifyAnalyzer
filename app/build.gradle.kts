@@ -34,9 +34,11 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
     buildFeatures {
         compose = true
         viewBinding = true
+        dataBinding = true
     }
 }
 
@@ -65,5 +67,9 @@ dependencies {
     implementation("com.google.android.material:material:1.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+    implementation("androidx.cardview:cardview:1.0.0")
+    implementation("androidx.databinding:databinding-runtime:4.2.0")
+    //implementation("androidx.compose.material3:material3:1.0.0-beta01")
 }
 
