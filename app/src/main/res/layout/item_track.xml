@@ -31,10 +31,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:paddingLeft="16dp"
                 android:text="Artist Name"
-                android:textColor="@color/material_dynamic_secondary_variant"
-                android:textSize="14sp"
-                android:paddingLeft="16dp"/>
+                android:textColor="#E1C4E7"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/playsCount"
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="Plays"
-                android:textColor="@color/material_dynamic_secondary_variant"
+                android:textColor="#BD90C7"
                 android:textSize="12sp"
                 android:paddingLeft="16dp"/>
 
@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="Time Played"
-                android:textColor="@color/material_dynamic_secondary_variant"
+                android:textColor="#BD90C7"
                 android:textSize="12sp"
                 android:paddingLeft="16dp"
                 android:paddingBottom="5dp"/>

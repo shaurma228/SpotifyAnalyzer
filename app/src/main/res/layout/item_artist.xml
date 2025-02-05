@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="Plays"
-                android:textColor="@color/material_dynamic_secondary_variant"
+                android:textColor="#BD90C7"
                 android:textSize="12sp"
                 android:paddingLeft="16dp"/>
 
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="Time Played"
-                android:textColor="@color/material_dynamic_secondary_variant"
+                android:textColor="#BD90C7"
                 android:textSize="12sp"
                 android:paddingLeft="16dp"
                 android:paddingBottom="5dp"/>

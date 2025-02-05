@@ -2,14 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_stats"
-        android:title="Статистика"/>
+        android:icon="@drawable/baseline_person_24"
+        android:title="Статистика" />
     <item
         android:id="@+id/nav_tracks"
-        android:title="Треки"/>
+        android:icon="@drawable/music_svgrepo_com"
+        android:title="Треки" />
     <item
         android:id="@+id/nav_artists"
-        android:title="Артисты"/>
+        android:icon="@drawable/musician_svgrepo_com"
+        android:title="Артисты" />
     <item
         android:id="@+id/nav_albums"
-        android:title="Альбомы"/>
+        android:icon="@drawable/music_album_svgrepo_com"
+        android:title="Альбомы" />
 </menu>
