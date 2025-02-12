@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                     sharedViewModel.loadData(jsonText)
                     sharedViewModel.analyzeSpotifyHistory()
 
-                    dataManager.saveJsonData(jsonText)
+                    dataManager.saveHistoryData(sharedViewModel.historyData.value ?: emptyMap())
 
                     Toast.makeText(this, "Данные загружены успешно!", Toast.LENGTH_SHORT).show()
                 } catch (e: Exception) {
@@ -87,9 +87,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadSavedData() {
-        val savedJson = dataManager.loadJsonData()
-        if (savedJson.isNotEmpty()) {
-            sharedViewModel.loadData(savedJson)
+        val savedHistory = dataManager.loadHistoryData()
+        if (savedHistory.isNotEmpty()) {
+            sharedViewModel.updateHistoryData(savedHistory)
             sharedViewModel.analyzeSpotifyHistory()
             Toast.makeText(this, "Данные загружены из памяти", Toast.LENGTH_SHORT).show()
         }
@@ -98,6 +98,6 @@ class MainActivity : AppCompatActivity() {
     private fun clearData() {
         sharedViewModel.clearData()
         Toast.makeText(this, "Данные очищены!", Toast.LENGTH_SHORT).show()
-        dataManager.clearJsonData()
+        dataManager.clearHistoryData()
     }
 }
